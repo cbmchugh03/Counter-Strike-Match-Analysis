@@ -5,9 +5,10 @@ from io import StringIO
 import time
 import numpy as np
 
-# This code must be run on the terminal. To run, navigate to the Windows terminal, navigate to the file path that the scraper is saved in,
-# type python hltv_scrapper.py. The code may run into errors, due to the fact that the pages do not load every single time. If this error is 
-# encountered, just re-run the file until it does not run into an error/
+# This code must be run on the terminal. To run, navigate to the Windows terminal, navigate to the file path 
+# that the scraper is saved in, type python hltv_scrapper.py. The code may run into errors, due to the fact 
+# that the pages do not load every single time. If this error is encountered, just re-run the file until 
+# it does not run into an error.
 
 
 # Creating functions to count round streak and round wins
