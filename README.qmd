@@ -51,7 +51,13 @@ The average round differential per team was also visualized, filtered to teams w
 
 ## Methods
 
-Numerous supervised and unsupervised learning methods were applied, each to two prediction tasks: binary classification (Win) and regression (average round differential per map). Variables like total rounds were excluded from classification models since they create trivially accurate predictions — winning more rounds obviously means winning more games, which doesn't tell us anything useful.
+Numerous supervised and unsupervised learning methods were applied, each to two prediction tasks: binary classification (Win) and regression (average round differential per map). Variables like total rounds were excluded from classification models since they create trivially accurate predictions: winning more rounds obviously means winning more games, which doesn't tell us anything useful.
+
+Decision trees were first used to identify important features for both outcomes. From there, a Random Forest Regressor was implemented to capture more variation in round differential. Logistic and Linear Regression models were built using features identified as important from the decision trees, to examine the strength and direction of relationships between features and outcomes as well as to compare their pattern capturing against the tree-based models. XGBoost models were then built for both classification and regression, as XGBoost handles high-dimensional data well and includes built-in feature importance, allowing all collected features to be included without pre-selection. Manual hyperparameter tuning was performed to optimize model performance.
+
+Lastly, clustering techniques were used to group teams based on their statistics, limited to teams that played at least 15 matches. Agglomerative hierarchical clustering was performed using both Ward and complete linkage methods, testing different numbers of clusters. K-means clustering with k = 5 and k = 3 was also applied to compare results.
+
+## Results
 
 ### Decision Trees & Random Forest
 
