@@ -55,7 +55,7 @@ content with no issues. The scraper works as follows:
 - Users can set a search range based on the total number of matches in a
   tournament, then run the notebook from the terminal
 - After all data is pulled, the code reformats it into a more usable
-  format — aggregating certain statistics (such as trades) while taking
+  format, aggregating certain statistics (such as trades) while taking
   the maximum or minimum of others (such as kills and ADR)
 - Outputs a formatted CSV that can be directly fed into the models
 
@@ -174,10 +174,10 @@ The XGBoost model achieved the strongest performance with an **MAE of
 1.11** and an **R² of 0.915**. This is particularly impressive since
 Counter-Strike matches require a minimum 2-round differential to
 determine a winner, meaning the model predicts to within about half that
-margin. The model heavily weighted paired offensive and defensive stats
-— both your team’s multi-kills and the opponent’s multi-kills were the
-top two features, followed by round streaks for both sides and your
-team’s highest ADR.
+margin. The model heavily weighted paired offensive and defensive stats:
+both your team’s multi-kills and the opponent’s multi-kills were the top
+two features, followed by round streaks for both sides and your team’s
+highest ADR.
 
 ![](Figures/figure_7.png)
 
@@ -197,7 +197,7 @@ statistics, limited to teams with at least 15 matches.
 archetypes. One cluster contains 3 of the 5 lowest-ADR teams, while
 another contains the two highest win-percentage teams, Spirit and
 Vitality. Interestingly, the model grouped Eternal Fire and Cloud9
-together — two teams that both effectively exited competitive
+together, two teams that both effectively exited competitive
 Counter-Strike in early 2025 due to roster collapse and disbandment,
 suggesting the clustering captured teams in organizational decline
 rather than just poor performance.
